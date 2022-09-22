@@ -1,36 +1,16 @@
-package org.example.core;
+package org.example.models;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.interfaces.AcademicOffer;
 
+@Getter
+@Setter
 public class Course extends AcademicOffer {
 
     private double monthlyHours;
     private double durationInMonths;
     private double pricePerHour;
-
-    public double getMonthlyHours() {
-        return monthlyHours;
-    }
-
-    public void setMonthlyHours( double monthlyHours ) {
-        this.monthlyHours = monthlyHours;
-    }
-
-    public double getDurationInMonths() {
-        return durationInMonths;
-    }
-
-    public void setDurationInMonths( double durationInMonths ) {
-        this.durationInMonths = durationInMonths;
-    }
-
-    public double getPricePerHour() {
-        return pricePerHour;
-    }
-
-    public void setPricePerHour( double pricePerHour ) {
-        this.pricePerHour = pricePerHour;
-    }
 
     @Override
     public double calcPrice() {

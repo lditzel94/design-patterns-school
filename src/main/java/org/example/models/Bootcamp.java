@@ -1,23 +1,21 @@
-package org.example.core;
+package org.example.models;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.interfaces.AcademicOffer;
+import org.example.interfaces.Composable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bootcamp extends AcademicOffer {
+@Getter
+@Setter
+public class Bootcamp extends AcademicOffer implements Composable {
     private double bonusPercentage;
     private List<AcademicOffer> offers = new ArrayList<>();
 
-    public double getBonusPercentage() {
-        return bonusPercentage;
-    }
-
-    public void setBonusPercentage( double bonusPercentage ) {
-        this.bonusPercentage = bonusPercentage;
-    }
-
-    public void add( AcademicOffer offer ) {
+    @Override
+    public void add( AcademicOffer offer ) throws Exception {
         offers.add( offer );
     }
 
@@ -30,4 +28,6 @@ public class Bootcamp extends AcademicOffer {
 
         return total;
     }
+
+
 }

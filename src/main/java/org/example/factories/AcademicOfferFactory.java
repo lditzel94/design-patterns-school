@@ -1,5 +1,10 @@
-package org.example.institute;
+package org.example.factories;
 
+import org.example.interfaces.AcademicOffer;
+import org.example.models.Bootcamp;
+import org.example.models.Career;
+import org.example.models.Course;
+import org.example.models.Workshop;
 import org.example.types.OfferTypes;
 
 public class AcademicOfferFactory {

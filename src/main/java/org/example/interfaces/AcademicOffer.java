@@ -1,4 +1,4 @@
-package org.example.institute;
+package org.example.interfaces;
 
 public abstract class AcademicOffer {
     private String name;
